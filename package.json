@@ -1,6 +1,6 @@
 {
   "name": "@sassy-js/pub",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Sassy pub is a simple boilerplate for an NPM package with typescript, eslint, prettier, and changesets.",
   "main": "src/index.ts",
   "keywords": [

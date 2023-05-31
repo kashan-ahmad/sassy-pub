@@ -15,9 +15,9 @@ To get started with Sassy Pub, simply follow these steps:
 
 1. Clone the Sassy Pub repository to your local machine:
 
-  ```bash
-  git clone https://github.com/kashan-ahmad/sassy-pub
-  ```
+```bash
+git clone https://github.com/kashan-ahmad/sassy-pub
+```
 
 2. Review the `package.json` file and make any necessary changes to the package name, version, description, and the scripts.
 3. Run `npm install` to install the project dependencies.
