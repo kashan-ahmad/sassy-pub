@@ -1,0 +1,45 @@
+{
+  "name": "@sassy-js/pub",
+  "version": "0.0.0",
+  "description": "Sassy pub is a simple boilerplate for an NPM package with typescript, eslint, prettier, and changesets.",
+  "main": "src/index.ts",
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "eslint",
+    "prettier",
+    "changesets"
+  ],
+  "author": {
+    "name": "Kashan Ahmad",
+    "url": "https://kashanahmad.me",
+    "email": "kashan.aech.620@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kashan-ahmad/sassy-pub"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "npm run lint:fix && prettier --write .",
+    "build": "npm run format && tsc",
+    "release:migrate": "cp package.json LICENSE README.md CHANGELOG.md CONTRIBUTING.md dist",
+    "release:version": "npx changeset version && npm run release:migrate",
+    "release:prepare": "npm run build && npm run release:version",
+    "release:tags": "git push && git push --tags",
+    "release": "npm run release:prepare && cd dist && npm publish --access=public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  }
+}
